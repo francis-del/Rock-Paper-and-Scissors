@@ -1,13 +1,15 @@
 // deno-lint-ignore-file
+
 const options = ["rock", "paper", "scissors"];
 let winners = [];
+game();
 
 //Confirm if the user wants to play another match
 function game() {
     for (let i = 1; i <= 5; i++) {
         playRound(i);
     }
-    document.querySelector("button").textContent = "Play new game";
+    //document.querySelector("button").textContent = "Play new game";
     logWins();
 }
 
@@ -76,6 +78,7 @@ function logWins() {
     console.log("Computer Wins:", computerWins);
     console.log("Ties:", ties);
 }
+
 
 //logs winner of each round between the player and computer
 function logRound(playerChoice, computerChoice, winner, round) {
